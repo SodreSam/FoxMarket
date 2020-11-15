@@ -59,8 +59,9 @@ p {
 }
 
 .carrinho {
-    margin-left: 1700px;
-    margin-top: -48px;
+    top: 1.4rem;
+    right: 6.6rem;
+    position: absolute;
 }
 
 .counter {

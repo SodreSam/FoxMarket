@@ -1,3 +1,43 @@
-h1 {
-    color: #713231;
+.arrow-back {
+    top: 1.4rem;
+    left: 2rem;
+    position: absolute;
+}
+
+
+.checkout-container {
+    width: 100%;
+    max-width: 700px;
+    height: 90vh;
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-content {
+    width: 100%;
+    padding: 250px;
+    margin-top: 30px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bag {
+    width: 100px;
+    height: 100px;
+    top: 1.4rem;
+    left: 9rem;
+
+}
+
+.end-title {
+    font-size: 28px;
 }
