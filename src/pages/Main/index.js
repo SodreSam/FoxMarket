@@ -91,12 +91,15 @@ const items = [
   }
 ];
 
+
 export default function Main() {
-  const [carrinho, setCarrinho] = useState(0);
+  const [count, setCounter] = useState(0);
   const [data, setData] = useState(items);
+  window.localStorage.setItem('produtos', JSON.stringfy(data))
 
   return (
     <>
+      
       <div className="main-container">
         <Link to="/checkout" className="carrinho">
           <FiShoppingCart size={30} color="#fff" />
@@ -124,17 +127,18 @@ export default function Main() {
                 <h1>R${item.price}</h1>
 
                 <button
-                  onClick={() => setCarrinho(carrinho + 1)}
+                  onClick={() => setCounter(count + 1)}
                   className="button"
                 >
                   Adicionar ao carrinho
                 </button>
+                
               </div>
             ))}
           </div>
         </div>
       </div>
-      <h1 className="counter">{carrinho}</h1>
+      <h1 className="counter">{count}</h1>
     </>
   );
 }

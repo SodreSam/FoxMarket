@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FiArrowLeftCircle, FiShoppingBag } from 'react-icons/fi';
+import { FiArrowLeftCircle} from 'react-icons/fi';
 
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,13 @@ import './styles.css';
 
 import bag from '../../assets/bag.png';
 
+
+
 export default function Checkout(){
+    const storagedProducts = window.localStorage.getItem('produtos') || {}
+    const parsedProducts = JSON.parse(storagedProducts)
+
+    console.log(parsedProducts)
     return(
         <div>
         <Link to="/" className="arrow-back">
