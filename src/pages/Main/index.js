@@ -92,17 +92,13 @@ const items = [
 
 
 export default function Main() {
-  const [count, setCounter] = useState(0);
   const [data, setData] = useState(items);
 
-   const storagedProducts = window.localStorage.getItem('data') || {}
-   const parsedProducts = JSON.parse(storagedProducts)
+  const itemClicked = item => {
+    localStorage.setItem("products", JSON.stringify([...(JSON.parse(localStorage.getItem("products"))) || [], item]))
+    //const [count, setCounter] = useState(0);
+  }
 
-   console.log(parsedProducts)
-  useEffect(() => {
-    window.localStorage.setItem('data', JSON.stringify(data))
-    console.log('suuup');
-  }, [data]);
   
   return (
     <>
@@ -134,7 +130,7 @@ export default function Main() {
                 <h1>R${item.price}</h1>
 
                 <button
-                  onClick={() => setCounter(count + 1)}
+                  onClick={() => itemClicked(item)}
                   className="button"
                 >
                   Adicionar ao carrinho
@@ -145,7 +141,6 @@ export default function Main() {
           </div>
         </div>
       </div>
-      <h1 className="counter">{count}</h1>
     </>
   );
 }
