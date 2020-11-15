@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Checkout from './pages/Checkout';
 import Main from './pages/Main';
 
-
 export default function Routes() {
     return (
         <BrowserRouter>
