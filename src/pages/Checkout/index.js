@@ -11,10 +11,7 @@ import bag from '../../assets/bag.png';
 
 
 export default function Checkout(){
-    const storagedProducts = window.localStorage.getItem('produtos') || {}
-    const parsedProducts = JSON.parse(storagedProducts)
 
-    console.log(parsedProducts)
     return(
         <div>
         <Link to="/" className="arrow-back">

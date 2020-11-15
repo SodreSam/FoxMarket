@@ -15,19 +15,19 @@ body {
 
 .button {
     cursor: pointer;
-    font: 200 16px Roboto, sans-serif;
-    width: 100%;
-    height: 60px;
+    font: 150 14px Roboto, sans-serif;
+    width: 140px;
+    height: 70px;
     background: #17303a;
     border: 0;
     border-radius: 8px;
     color: #FFF;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 16px;
     display: inline-block;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 18px;
     transition: filter 0.2s;
     text-align: center;
 }
