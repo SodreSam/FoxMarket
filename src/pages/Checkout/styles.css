@@ -28,16 +28,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
 }
 
 .bag {
     width: 100px;
     height: 100px;
-    top: 1.4rem;
-    left: 9rem;
+    top: 1.6rem;
+    left: 20vh;
 
 }
 
 .end-title {
     font-size: 28px;
+}
+
+.drinks {
+    max-width:100px;
+    max-height:50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(179, 179, 179, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
 }

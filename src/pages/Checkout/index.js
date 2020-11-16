@@ -1,59 +1,49 @@
-import React from 'react';
+import React from "react";
 
-import { FiArrowLeftCircle} from 'react-icons/fi';
+import { FiArrowLeftCircle, FiPlusCircle } from "react-icons/fi";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import './styles.css';
+import "./styles.css";
 
-import bag from '../../assets/bag.png';
+import bag from "../../assets/bag.png";
 
+export default function Checkout() {
+  const storagedProducts = JSON.parse(localStorage.getItem("Products"));
+  console.log(storagedProducts);
+  return (
+    <div>
+      <Link to="/" className="arrow-back">
+        <FiArrowLeftCircle size={35} color="#fff" />
+      </Link>
 
+      <div className="checkout-container">
 
-export default function Checkout(){
-    const storagedProducts = localStorage.getItem("products");
-    console.log(storagedProducts);
-    return(
-        <div>
+        
+        <h1 className="end-title">Finalizar pedido</h1>
 
-        <Link to="/" className="arrow-back">
+        <img className="bag" src={bag} alt="bag" />
 
-            <FiArrowLeftCircle  size={35} color="#fff"/>
+        <h1>FoxMarket</h1>
 
-        </Link>
+        <div className="checkout-content">
+          <div className="checkout-list">
+          <div className="products-list">
+          {storagedProducts.map((item) => (
+            <div key={item.id} className="list">
+              <img className="drinks" src={item.image} alt="drinks" />
 
-        <div className="checkout-container"> 
-            <h1>{storagedProducts}</h1>
+              <p>{item.name}</p>
 
-            <div className="products-list">
-                
-            {storagedProducts.map((item) => (
-              <div key={item.id} className="list">
-                <img className="drinks" src={item.image} alt="drinks" />
+              <h1>R$ {item.price}</h1>
+            </div>
+          ))}
+        </div>
 
-                <p>{item.name}</p>
-
-                <h1>R${item.price}</h1>
-
-                
-              </div>
-            ))}
           </div>
-            <h1 className="end-title">Finalizar pedido</h1>
-            
-                <div className="checkout-content">
-                    <div className="checkout-list">
-
-                                <img className="bag" src={bag}  alt="bag"/>
-                                <h1>FoxMarket</h1>
-
-                    </div>
-                    
-                </div> 
-            <button className="button">Finalizar Compra</button>
-
         </div>
-
-        </div>
-    );
+        <button className="button">Finalizar Compra</button>
+      </div>
+    </div>
+  );
 }

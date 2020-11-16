@@ -56,7 +56,7 @@ const items = [
     image: aguagas
   },
   {
-    id: 2,
+    id: 4,
     idCategory: 1,
     name: "Bolo de Chocolate",
     description: "Bolo de Chocolate",
@@ -64,7 +64,7 @@ const items = [
     image: bolo
   },
   {
-    id: 3,
+    id: 5,
     idCategory: 1,
     name: "KitKat",
     description: "KitKat",
@@ -72,7 +72,7 @@ const items = [
     image: kitkat
   },
   {
-    id: 4,
+    id: 6,
     idCategory: 2,
     name: "Doritos",
     description: "Doritos",
@@ -80,7 +80,7 @@ const items = [
     image: doritos
   },
   {
-    id: 5,
+    id: 7,
     idCategory: 2,
     name: "Ruffles",
     description: "Ruffles",
@@ -95,7 +95,7 @@ export default function Main() {
   const [data, setData] = useState(items);
 
   const itemClicked = item => {
-    localStorage.setItem("products", JSON.stringify([...(JSON.parse(localStorage.getItem("products"))) || [], item]))
+    localStorage.setItem("Products", JSON.stringify([...(JSON.parse(localStorage.getItem("Products"))) || [], item]))
     //const [count, setCounter] = useState(0);
   }
 
@@ -127,7 +127,7 @@ export default function Main() {
 
                 <p>{item.name}</p>
 
-                <h1>R${item.price}</h1>
+                <h1>R$ {item.price}</h1>
 
                 <button
                   onClick={() => itemClicked(item)}
@@ -139,6 +139,10 @@ export default function Main() {
               </div>
             ))}
           </div>
+          <section className="count"> 
+              
+          </section>
+
         </div>
       </div>
     </>
