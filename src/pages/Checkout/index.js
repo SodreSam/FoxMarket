@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import { FiArrowLeftCircle, FiPlusCircle } from "react-icons/fi";
+import { FiArrowLeftCircle, FiCheck ,FiPlusCircle } from "react-icons/fi";
 
 import { Link } from "react-router-dom";
+
+import Modal from 'react-modal';
 
 import "./styles.css";
 
 import bag from "../../assets/bag.png";
 
 export default function Checkout() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  
   const storagedProducts = JSON.parse(localStorage.getItem("Products"));
   console.log(storagedProducts);
   return (
@@ -22,11 +32,11 @@ export default function Checkout() {
         
         <h1 className="end-title">Finalizar pedido</h1>
 
-        <img className="bag" src={bag} alt="bag" />
+        
 
         <h1>FoxMarket</h1>
 
-        <div className="checkout-content">
+        <div className="checkout-content"><img className="bag" src={bag} alt="bag" />
           <div className="checkout-list">
           <div className="products-list">
           {storagedProducts.map((item) => (
@@ -42,7 +52,21 @@ export default function Checkout() {
 
           </div>
         </div>
-        <button className="button">Finalizar Compra</button>
+        <button onClick={openModal} className="button">Finalizar Compra</button>
+        <div className="modal">
+        <Modal
+        isOpen={modalIsOpen}
+        shouldCloseOnOverlayClick={false}
+        onRequestClose={() => setIsOpen(false)}
+        
+        >
+          <FiCheck className="done" size={35} color="#fff" />
+          <h1>Pedido realizado com sucesso!</h1>
+            <button className="button" npm>
+              Fechar
+            </button>
+        </Modal>
+        </div>
       </div>
     </div>
   );
