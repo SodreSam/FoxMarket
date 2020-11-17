@@ -9,12 +9,11 @@ import "./styles.css";
 import coca from "../../assets/coca.png";
 import fanta from "../../assets/fanta.png";
 import bolo from "../../assets/bolo.png";
-import kitkat from '../../assets/kitkat.png';
-import doritos from '../../assets/doritos.png';
-import ruffles from '../../assets/ruffles.png';
-import agua from '../../assets/agua.png';
-import aguagas from '../../assets/aguagas.png';
-
+import kitkat from "../../assets/kitkat.png";
+import doritos from "../../assets/doritos.png";
+import ruffles from "../../assets/ruffles.png";
+import agua from "../../assets/agua.png";
+import aguagas from "../../assets/aguagas.png";
 
 const options = [
   { id: 0, value: "Bebidas", label: "Bebidas" },
@@ -28,7 +27,7 @@ const items = [
     idCategory: 0,
     name: "Fanta Uva Lata",
     description: "Fanta Uva lata 350ml",
-    price: 3.00,
+    price: 3.0,
     image: fanta
   },
   {
@@ -36,7 +35,7 @@ const items = [
     idCategory: 0,
     name: "Coca Cola Lata",
     description: "Coca Cola Lata 350ml",
-    price: 3.50,
+    price: 3.5,
     image: coca
   },
   {
@@ -44,7 +43,7 @@ const items = [
     idCategory: 0,
     name: "Água Mineral Sem Gás",
     description: "Água Mineral Sem Gás 500ml",
-    price: 2.50,
+    price: 2.5,
     image: agua
   },
   {
@@ -52,7 +51,7 @@ const items = [
     idCategory: 0,
     name: "Água Mineral com Gás",
     description: "Água Mineral com Gás 500ml",
-    price: 2.50,
+    price: 2.5,
     image: aguagas
   },
   {
@@ -60,7 +59,7 @@ const items = [
     idCategory: 1,
     name: "Bolo de Chocolate",
     description: "Bolo de Chocolate",
-    price: 5.00,
+    price: 5.0,
     image: bolo
   },
   {
@@ -68,7 +67,7 @@ const items = [
     idCategory: 1,
     name: "KitKat",
     description: "KitKat",
-    price: 4.00,
+    price: 4.0,
     image: kitkat
   },
   {
@@ -76,7 +75,7 @@ const items = [
     idCategory: 2,
     name: "Doritos",
     description: "Doritos",
-    price: 5.50,
+    price: 5.5,
     image: doritos
   },
   {
@@ -84,25 +83,31 @@ const items = [
     idCategory: 2,
     name: "Ruffles",
     description: "Ruffles",
-    price: 6.00,
+    price: 6.0,
     image: ruffles
   }
- 
 ];
-
 
 export default function Main() {
   const [data, setData] = useState(items);
 
-  const itemClicked = item => {
-    localStorage.setItem("Products", JSON.stringify([...(JSON.parse(localStorage.getItem("Products"))) || [], item]))
-    //const [count, setCounter] = useState(0);
-  }
+  const itemClicked = (item) => {
+    const products = JSON.parse(localStorage.getItem("Products")) || [];
 
-  
+    const isAlreadyPresent = products.some((product) => product.id === item.id);
+    const newProducts = isAlreadyPresent
+      ? products.map((product) =>
+          product.id === item.id
+            ? { ...product, count: product.count + 1 }
+            : product
+        )
+      : products.concat(item);
+
+    localStorage.setItem("Products", JSON.stringify(newProducts));
+  };
+
   return (
     <>
-      
       <div className="main-container">
         <Link to="/checkout" className="carrinho">
           <FiShoppingCart size={30} color="#fff" />
@@ -129,20 +134,13 @@ export default function Main() {
 
                 <h1>R$ {item.price}</h1>
 
-                <button
-                  onClick={() => itemClicked(item)}
-                  className="button"
-                >
+                <button onClick={() => itemClicked(item)} className="button">
                   Adicionar ao carrinho
                 </button>
-                
               </div>
             ))}
           </div>
-          <section className="count"> 
-              
-          </section>
-
+          <section className="count"></section>
         </div>
       </div>
     </>
