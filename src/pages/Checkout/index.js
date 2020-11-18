@@ -17,7 +17,7 @@ export default function Checkout() {
     setIsOpen(true);
   }
 
-  const storagedProducts = JSON.parse(localStorage.getItem("Products"));
+  const storagedProducts = JSON.parse(localStorage.getItem("Products")) || [];
   console.log(storagedProducts);
   return (
     <div>
@@ -40,10 +40,12 @@ export default function Checkout() {
 
                   <p>{item.name}</p>
 
-                  <h1>R$ {item.price}</h1>
+                  <h1>R$ {item.price * (item.count || 1)}</h1>
                   <p>{item.count}</p>
+                 
                 </div>
               ))}
+               <div>Total: {storagedProducts.reduce((a, b) => a + (b.price * (b.count||1)), 0)}</div>
             </div>
           </div>
         </div>
