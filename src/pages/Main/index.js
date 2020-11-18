@@ -134,12 +134,11 @@ export default function Main() {
 
                 <h1>R$ {item.price}</h1>
 
+                <p>{item.count}</p>
                 <button onClick={() => itemClicked(item)} className="button">
                   Adicionar ao carrinho
                 </button>
-                <section className="count">
-            <span><p>{item.count}</p></span>
-          </section>
+
               </div>
             ))}
           </div>

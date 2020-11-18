@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { FiArrowLeftCircle, FiCheck, FiPlusCircle } from "react-icons/fi";
+import { FiArrowLeftCircle, FiCheck, FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 
 import { Link } from "react-router-dom";
 
@@ -41,31 +41,22 @@ export default function Checkout() {
                   <p>{item.name}</p>
 
                   <h1>R$ {item.price * (item.count || 1)}</h1>
+
+                  <FiMinusCircle/>
                   <p>{item.count}</p>
-                 
+                  <button className="plus"onClick={item.count++}> <FiPlusCircle size={20}/></button>
                 </div>
               ))}
-               <div>Total: {storagedProducts.reduce((a, b) => a + (b.price * (b.count||1)), 0)}</div>
+               <div className="total">Total: R$
+                    {storagedProducts.reduce((a, b) => a + (b.price * (b.count||1)), 0)}
+              </div>
             </div>
           </div>
         </div>
-        <button onClick={openModal} className="button">
-          Finalizar Compra
-        </button>
-        <div className="modal">
-          <Modal
-            isOpen={modalIsOpen}
-            shouldCloseOnOverlayClick={false}
-            onRequestClose={() => setIsOpen(false)}
-          >
-            <FiCheck className="done" size={35} color="#fff" />
-            <h1>Pedido realizado com sucesso!</h1>
-            <button className="button" npm>
-              Fechar
-            </button>
-          </Modal>
+        
+
+
         </div>
       </div>
-    </div>
   );
 }

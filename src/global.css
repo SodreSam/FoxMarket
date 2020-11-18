@@ -42,3 +42,6 @@ h1 {
     display: flex;
     justify-content: center;
 }
+button {
+    text-decoration: none;
+}
