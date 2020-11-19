@@ -55,6 +55,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 <div id="Requisitos">
+	
 ### Pré-requisitos para rodar a apliacação
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
@@ -64,7 +65,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/SodreSam/FoxMarket>
+$ git clone git@github.com:SodreSam/FoxMarket.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd market
