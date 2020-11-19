@@ -11,7 +11,6 @@
  <a href="#features">Features</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#requisitos">Requisitos</a> • 
- <a href="#autor">Autor</a> •
  <a href="#layout">Layout</a>
 </p>
 
@@ -46,7 +45,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <div id="features"> 
 
-   ### Features
+   ### Features adicionadas até então
 
 - [x] Lista de produtos disponíveis para compra
 - [x] Filtro por categorias dos produtos
@@ -57,7 +56,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 </div>
 
 
-<div id="Requisitos">
+<div id="requisitos">
 	
 ### Pré-requisitos para rodar a apliacação
 
@@ -80,4 +79,19 @@ $ npm install
 $ npm start
 ```
 </div>
+
+<div id="layout">
+	
+### 🧑 Layout
+	
+	O layout proposto para o desafio foi enviado por email, e em seguida realizei a prototipação no Figma. 
+	Você pode conferir a ideia de como ainda vai ficar acessando: https://bit.ly/3pKCrMQ (obs: é necessário ter uma conta na plataforma para acessar o layout)
+	
+</div>
+
+<hr>
+
+
+<p align="center">Grande parte deste projeto foi desenvolvido com conhecimentos que adquiri na última semana, e ainda que precise de diversos ajustes, estou contente com o resultado que está tendo. Terá continuidade mesmo após o envio para avaliação, para que então eu possa implementar melhorias.</p>
+	
 
