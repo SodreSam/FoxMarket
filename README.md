@@ -82,16 +82,16 @@ $ npm start
 
 <div id="layout">
 	
-### 🧑 Layout
+###  🖌 Layout
 	
-	O layout proposto para o desafio foi enviado por email, e em seguida realizei a prototipação no Figma. 
-	Você pode conferir a ideia de como ainda vai ficar acessando: https://bit.ly/3pKCrMQ (obs: é necessário ter uma conta na plataforma para acessar o layout)
+ O layout proposto para o desafio foi enviado por email, e em seguida realizei a prototipação no Figma. 
+ Você pode conferir a ideia de como ainda vai ficar acessando: https://bit.ly/3pKCrMQ (obs: é necessário ter uma conta na plataforma para acessar o layout) </h4>
 	
 </div>
 
 <hr>
 
 
-<p align="center">Grande parte deste projeto foi desenvolvido com conhecimentos que adquiri na última semana, e ainda que precise de diversos ajustes, estou contente com o resultado que está tendo. Terá continuidade mesmo após o envio para avaliação, para que então eu possa implementar melhorias.</p>
+<p align="center">Grande parte deste projeto foi desenvolvido com conhecimentos que adquiri na última semana, e ainda que precise de diversos ajustes, estou contente com o resultado que estou tendo. Terá continuidade mesmo após o envio para avaliação, para que então eu possa implementar melhorias.</p>
 	
 
