@@ -28,6 +28,8 @@
 
 <hr>
 
+<div id ="tecnologias">
+
  ### ⚒️ Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -37,6 +39,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React-Icons] (https://react-icons.github.io/react-icons/)
 
 
+</div>
 
 </div>
 <hr>
