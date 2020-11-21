@@ -18,7 +18,7 @@ body {
     font: 150 14px Roboto, sans-serif;
     width: 140px;
     height: 70px;
-    background: #17303a;
+    background: #04d361;
     border: 0;
     border-radius: 8px;
     color: #FFF;
@@ -32,7 +32,7 @@ body {
     text-align: center;
 }
 .button:hover{
-    filter: brightness(20%);
+    filter: brightness(60%);
 }
 
 h1 {

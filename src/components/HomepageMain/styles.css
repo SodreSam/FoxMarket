@@ -90,7 +90,7 @@ img {
 .item button {
     text-decoration: none;
 }
-footer button {
+button {
     text-decoration: none;
     cursor: pointer;
     font: 150 14px Roboto, sans-serif;
