@@ -32,7 +32,7 @@ body {
     text-align: center;
 }
 .button:hover{
-    filter: brightness(80%);
+    filter: brightness(20%);
 }
 
 h1 {
