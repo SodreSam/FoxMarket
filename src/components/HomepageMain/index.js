@@ -13,6 +13,7 @@ import ruffles from "../../assets/ruffles.png";
 import agua from "../../assets/agua.png";
 import aguagas from "../../assets/aguagas.png";
 
+
 import './styles.css';
 
 const options = [
@@ -90,6 +91,9 @@ const items = [
 
 export default function HomepageMain() {
     const [data, setData] = useState(items);
+    const [counter, setCounter] = useState(0);
+
+       
 
   const itemClicked = (item) => {
     const products = JSON.parse(localStorage.getItem("Products")) || [];
@@ -107,7 +111,42 @@ export default function HomepageMain() {
   };
 
   return (
-    <form>
+    
+
+    
+    <main className='page-content'>
+
+		<Link to="/checkout" className="checkout-basket">
+        <FiShoppingCart size={35} color="#fff" />
+      	</Link>
+	        <section className='checkout'>
+		
+		    <header>
+
+        <Select
+        className="select"
+        placeholder="Selecione a categoria do produto"
+        onChange={({ value }) => {
+          const { id } = options.find((obj) => obj.value === value);
+
+          setData(items.filter((obj) => obj.idCategory === id));
+        }}
+        options={options}
+       />
+
+		    </header>
+		
+		<section className='store-info'>
+
+			<section className='details'>
+
+				
+                <h3>Verifique abaixo os itens disponíveis para compra.</h3> <br/>
+
+			</section>
+		</section>
+		
+		<form>
 			
 			
 			<ul className='item-list'>
@@ -116,14 +155,22 @@ export default function HomepageMain() {
 					{data.map((item) => (
 						<div key={item.id} className='item'>
 							<item-component>
-								<h4 className="itemm"><img src={item.image} alt="agua" />{item.name}</h4>
-								<span className='price'>R$ {item.price}</span>
-                                <button>Adicionar ao Carrinho</button>	
-							</item-component>
+                <span className="itemm"><img src={item.image} alt="icon" /></span>
+                
+								<increment-decrement>
+                <h4>{item.name}</h4>
+								</increment-decrement>
+								 <span className='price'>R$ {item.price}</span>	
+								
+                <button className="add-button" onClick={() => itemClicked(item)}>Adicionar ao carrinho</button>
+							</item-component>     
+                    
 						</div>
+            
+ 
 					))}
 						<br/>
-                        
+
 			</div>
 
 			<br/>
@@ -133,5 +180,9 @@ export default function HomepageMain() {
 			
 		</form>
 
-  );
+	</section>
+
+    </main>
+
+);
 }

@@ -3,7 +3,7 @@ import Select from "react-select";
 
 import HomepageMain from '../../components/HomepageMain';
 
-import "./styles.css";
+//import "./styles.css";
 
 
 

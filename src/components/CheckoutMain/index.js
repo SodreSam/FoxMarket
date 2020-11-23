@@ -56,9 +56,10 @@ export default function CheckoutMain () {
 						<div key={item.id} className='item'>
 							<item-component>
 								<increment-decrement>
-									<button>-</button>
+
+									<button className="count-button-minus">-</button>
 									<span> {item.count} </span>
-									<button>+</button>
+									<button className="count-button-plus">+</button>
 								</increment-decrement>
 								<h4 className="itemm"><img src={item.image} alt="agua" />{item.name}</h4>
 								<span className='price'>R$ {item.price}</span>	
@@ -82,7 +83,7 @@ export default function CheckoutMain () {
 			
 		</form>
 
-			<footer>
+			<footer className="end-button">
 				<button type='submit'>Finalizar compra</button>
 			</footer>
 

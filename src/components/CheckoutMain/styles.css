@@ -87,21 +87,16 @@ img {
 	margin-top: 30px;
 }
 
-.item button {
-    text-decoration: none;
-}
-footer button {
+.end-button {
     text-decoration: none;
     cursor: pointer;
     font: 150 14px Roboto, sans-serif;
     width: 180px;
-    height: 70px;
+    height: 40px;
     background: #04d361;
-    border: 0;
     border-radius: 8px;
     color: #FFF;
     font-weight: 500;
-    margin-top: 16px;
     display: inline-block;
     text-decoration: none;
     font-size: 16px;
@@ -110,24 +105,44 @@ footer button {
     text-align: center;
 }
 
-item-component {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    text-decoration: none;
-}
-
-.itemm {
-    max-width: 100px;
-    max-height: 80px;
-}
-
-.scroll {
-    overflow: scroll;
-}
-
 increment-decrement {
     text-decoration: none;
+}
+
+.count-button-minus {
+    text-decoration: none;
+    cursor: pointer;
+    font: 150 14px Roboto, sans-serif;
+    width: 20px;
+    height: 20px;
+    background: #c90000;
+    border: 0;
+    border-radius: 20px ;
+    color: #FFF;
+    font-weight: 500;
+    margin-top: 16px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.count-button-plus {
+    text-decoration: none;
+    cursor: pointer;
+    font: 150 14px Roboto, sans-serif;
+    width: 20px;
+    height: 20px;
+    background: #04d361;
+    border: 0;
+    border-radius: 20px ;
+    color: #FFF;
+    font-weight: 500;
+    margin-top: 16px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
 }
